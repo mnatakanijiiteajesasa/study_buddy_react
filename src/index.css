@@ -1,0 +1,111 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  box-sizing: border-box;
+  padding: 0px 0px;
+  margin: 0 0px;
+  position: fixed;
+  width: 100%;
+  height: auto;
+}
+.App-content {
+  background-color:#808080;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #FFB6C1;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+.container h2 {
+  color: #ff0000;
+}
+
+
+.navbar {
+  background-color: #333;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.Logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links:hover{
+  color: #00ff00;
+}
+.nav-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+.features {
+  padding: 50px 0;
+}
+
+.features h2 {
+  color: #00ff00;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px
+} 
+
+
+.features-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #2c022c;
+}
+
+.feature {
+  background: #333;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.feature h3 {
+  color: #00ff00;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  color: #ff0000;
+  font-size: 16px;
+}
