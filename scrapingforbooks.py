@@ -1,6 +1,6 @@
 import requests
 import pywhatkit as kit
-from flask import Flask, jsonify
+
 
 # this file is going to house the entire back end for the website
 
