@@ -4,7 +4,7 @@ import time
 API_KEY = "UQWc4yHAdnwYsz9527TIxabPJueCNrXM"
 URL = "https://core.ac.uk/contact"
 
-user_request = input("Enter the subject of the journal, article and researcg papers you are looking for: \n")
+user_request = input("Enter the subject of the journal, article and research papers you are looking for: \n")
 
 header = {
     'Authorisation': f'Bearer {API_KEY}',
