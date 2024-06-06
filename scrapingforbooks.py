@@ -1,9 +1,5 @@
 import requests
 
-
-
-# this file is going to house the entire back end for the website
-
 user_query = input("What unit are you interested in? ")
 
 
