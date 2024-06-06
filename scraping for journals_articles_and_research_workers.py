@@ -1,4 +1,5 @@
 import requests
+import time
 
 API_KEY = "UQWc4yHAdnwYsz9527TIxabPJueCNrXM"
 URL = "https://core.ac.uk/contact"
@@ -16,10 +17,20 @@ params ={
     'journals': user_request,
     'sort': 'relevance'
 }
-response = requests.get(url = URL, params=params, headers=header)
 
-if response.status_code==250:
-    data=response.json()
-    print(data)
+max_retries = 5
+retry_delay = 5
+
+for attempt in range(max_retries):
+    response = requests.get(url=URL, headers=header, params=params)
+    if response.status_code == 200:
+        data = response.json()
+        print(data)
+        break
+    elif response.status_code == 530:
+        print(f'Error {response.status_code}: Server Unavailable. Retrying in a {retry_delay}seconds')
+        time.sleep(retry_delay)
+    else:
+        print(f'Error: {response.status_code}')
 else:
-    print(f'Error: {response.status_code}')
+    print("Oops! Service not available")
