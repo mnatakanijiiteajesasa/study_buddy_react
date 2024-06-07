@@ -84,8 +84,3 @@ def search():
 
 
 
-
-
-search_book_in_library(user_query)
-
-
