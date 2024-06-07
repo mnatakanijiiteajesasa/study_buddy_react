@@ -1,13 +1,15 @@
+# scraping for books, journals, articles and research works
+
 import requests
 import time
 
-API_KEY = "UQWc4yHAdnwYsz9527TIxabPJueCNrXM"
-URL = "https://core.ac.uk/contact"
+CORE_API_KEY = "UQWc4yHAdnwYsz9527TIxabPJueCNrXM"
+CORE_URL = "https://core.ac.uk/contact"
 
-user_request = input("Enter the subject of the cook, journal, article or research papers you are looking for: \n")
+user_request = input("Enter the subject of the book, journal, article or research papers you are looking for: \n")
 
 header = {
-    'Authorisation': f'Bearer {API_KEY}',
+    'Authorisation': f'Bearer {XORE_API_KEY}',
     'Accept': 'application/json'
 }
 
