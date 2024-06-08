@@ -1,10 +1,8 @@
 import requests
 
-category = input("What do you want to search for? (Books or journals): ")
-
 # Function for scraping the CORE API for journals, articles, and research works
-def search_core_api(user_jar):
-    CORE_API_KEY = "UQWc4yHAdnwYsz9527TIxabPJueCNrXM"
+def search_core_api(journal_query):
+    CORE_API_KEY = "UQWc4yHAdnwYsz9527TlxabPJueCNrXM"
     CORE_URL = "https://api.core.ac.uk/v3/search/works"
 
     headers = {
@@ -13,7 +11,7 @@ def search_core_api(user_jar):
     }
 
     params = {
-        'q': user_jar,
+        'q': journal_query,
         'language': "en",
         'sort': 'relevance'
     }
@@ -22,14 +20,14 @@ def search_core_api(user_jar):
     print(response.json())
 
 # Function for scraping for books
-def search_book_in_library(user_book):
+def search_book_in_library(book_query):
     open_library_url = "https://openlibrary.org/search.json"
 
     headers = {
         "User-Agent": "literary Nexus (mogakanewton0@gmail.com)"
     }
     params = {
-        "q": user_book,
+        "q": book_query,
         "fields": "title,author_name,cover_i",
         "limit": "5",
         "lang": "en"
@@ -38,12 +36,15 @@ def search_book_in_library(user_book):
     response = requests.get(url=open_library_url, params=params, headers=headers)
     print(response.json())
 
+category = input("What do you want to search for? (Books or journals): ")
 # Function to decide which search to perform
-def search(user_book, user_jar):
+
+
+def search(book_query, journal_query):
     if category.lower() == "books":
-        search_book_in_library(user_book)
+        search_book_in_library(book_query)
     else:
-        search_core_api(user_jar)
+        search_core_api(journal_query)
 
 user_jar = input("Enter the name of the article, journal or research work you are searching for: \n")
 user_book = input("Enter the subject of the book you are searching for: \n")
