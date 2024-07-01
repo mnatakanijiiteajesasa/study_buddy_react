@@ -1,0 +1,83 @@
+.result-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 20px;
+}
+.result-item{
+ display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+
+.result-item:hover {
+  transform: scale(1.05);
+}
+
+.result-item h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.result-item img {
+  width: 50%;
+  height: auto;
+}
+
+.result-item p {
+  font-size: 1em;
+  color: #555;
+}
+
+.result-item a {
+  font-size: 1em;
+  color: #3498db;
+  text-decoration: none;
+}
+
+.result-item a:hover {
+  text-decoration: underline;
+}
+
+.book-info,
+.video-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-cover,
+.video-thumbnail {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.book-details,
+.video-details {
+  text-align: center;
+}
+
+.download-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.download-buttons button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.download-buttons button:hover {
+  background-color: #2980b9;
+}
